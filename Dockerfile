@@ -35,3 +35,5 @@ RUN \
 
 # Define working directory
 WORKDIR /root
+
+CMD ["sbt"]
