@@ -33,7 +33,11 @@ RUN \
   sbt compile && \
   rm -r project && rm build.sbt && rm Temp.scala && rm -r target
 
+RUN addgroup -g 12345 sbt && \
+    adduser -u 12345 -D -G sbt sbt
+USER sbt
+
 # Define working directory
-WORKDIR /root
+WORKDIR /home/sbt
 
 CMD ["sbt"]
