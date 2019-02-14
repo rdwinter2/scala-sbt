@@ -25,6 +25,8 @@ docker build -t hseeberger/scala-sbt github.com/hseeberger/scala-sbt
 
 ```
 docker run -it --rm hseeberger/scala-sbt
+
+docker run -v $(pwd .):/home/appuser -v ~/.ivy2:/home/appuser/.ivy2 -it hseeberger/scala-sbt:latest
 ```
 
 
