@@ -17,7 +17,8 @@ docker pull hseeberger/scala-sbt
 ```
 Alternatively, you can build an image from Dockerfile:
 ```
-docker build -t hseeberger/scala-sbt github.com/hseeberger/scala-sbt
+cd scala-sbt
+docker build -t scala-sbt .
 ```
 
 
@@ -26,7 +27,7 @@ docker build -t hseeberger/scala-sbt github.com/hseeberger/scala-sbt
 ```
 docker run -it --rm hseeberger/scala-sbt
 
-docker run -v $(pwd .):/home/sbt -v ~/.ivy2:/home/sbt/.ivy2 -it rdwinter2/scala-sbt:latest
+docker run -v $(pwd .):/home/sbt -v ~/.ivy2:/home/sbt/.ivy2 -it scala-sbt:latest
 ```
 
 
